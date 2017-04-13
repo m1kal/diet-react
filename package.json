@@ -1,0 +1,25 @@
+{
+  "name": "npm-react",
+  "version": "0.1.0",
+  "description": "React as another UI to Diet",
+  "main": "index.js",
+  "scripts": {
+    "http_server" : "start http-server -p 3020 -P http://localhost:3010",
+    "sinatra" : "start ruby server/sinatra.rb",
+    "start" : "npm run sinatra && npm run http_server",
+    "webpack" : "webpack",
+    "postinstall": "npm run install_diet && npm run webpack",
+    "install_diet" : "cd server && rm -rf Diet && git clone https://github.com/m1kal/Diet.git"
+  },
+  "author": "m1kal",
+  "license": "MIT",
+  "dependencies": {
+  "react":">=15.5.3",
+  "react-dom":">=15.5.3",
+  "webpack":">=2",
+  "babel-loader": ">=6",
+  "babel-cli": ">=6",
+  "babel-preset-react":">=6",
+  "babel-preset-es2015" :">=6"
+  }
+}

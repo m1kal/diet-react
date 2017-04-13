@@ -1,0 +1,4 @@
+node_modules
+bundle.js
+*_diet.txt
+server/Diet
